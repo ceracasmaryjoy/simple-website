@@ -1,0 +1,248 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway';
+}
+
+.container {
+    width: 1170px;
+    margin-inline: auto;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-family: 'Open Sans';
+    font-weight: bold;
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+h5 {
+    font-size: 2rem;
+}
+
+h6 {
+    font-size: 0.9rem;
+}
+
+.header {
+    background-image: url(../images/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding-top: 3rem;
+}
+
+.header .container::after {
+    content: '';
+    width: 100%;
+    height: 0.1rem;
+    background: #505369;
+    top: 5rem;
+    position: absolute;
+}
+
+.menu-nav ul li {
+    font-weight: bold;
+    font-size: 0.8rem;
+    list-style: none;
+    display: inline-block;
+    margin: 1.4rem;
+}
+
+.menu-content ul li {
+    font-weight: bold;
+    font-size: 0.8rem;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin: 1.4rem;
+    padding: 6px 20px;
+}
+
+.menu-mobile {
+    position: relative;
+}
+
+.menu-content {
+    display: none;
+    position: absolute;
+    right: -127%;
+}
+
+.menu-content ul li:hover {
+    background: #e84545;
+    padding: 6px 20px;
+}
+
+.menu-mobile:hover i.fa-sharp.fa-solid.fa-bars {
+    background-color: #e84545;
+}
+
+.menu-mobile:hover .menu-content {
+    display: block;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+i.fa-sharp.fa-solid.fa-bars {
+    display: none;
+}
+
+.inner-banner-text {
+    text-align: center;
+    padding: 6.2rem 0;
+}
+
+.inner-banner-text h1 {
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 4.3rem;
+    width: 70%;
+    margin-inline: auto;
+}
+
+.inner-banner-text p {
+    color: #fff;
+    font-size: 1.3rem;
+    text-align: center;
+    width: 65%;
+    margin-inline: auto;
+    margin-bottom: 6rem;
+}
+
+.banner-btn {
+    font-size: 0.8rem;
+    background-color: #e84545;
+    text-transform: uppercase;
+    padding: 1rem 3rem;
+}
+
+#list .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    text-align: center;
+    column-gap: 1.4rem;
+    row-gap: 3.1rem;
+    padding: 6.2rem 0;
+}
+
+#list h6 {
+    margin: 1.7rem 0;
+}
+
+#image-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.gallery {
+    position: relative;
+}
+
+.image-text {
+    top: 0;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    background: #e84545;
+    height: 100%;
+    width: 100%;
+    color: white;
+    opacity: 0;  
+    padding-top: 75px;
+}
+
+img.image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.gallery:hover .image-text {
+    opacity: 0.8;
+}
+
+@media screen and (max-width: 550px) {
+    .container {
+        width: 80%;
+        margin-inline: auto;
+    }
+    html {
+        font-size: 1rem;
+    }
+    i.fa-sharp.fa-solid.fa-bars {
+        color: white;
+        font-size: 1.8rem;
+        display: inherit;
+        position: relative;
+        left: -21px;
+    }
+    nav.menu-nav li{
+        display: none;
+    }
+    
+    .menu-content ul li {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #list .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+    #list p {
+        width: 63%;
+        margin-inline: auto;
+    }
+    .inner-banner-text h1 {
+        width: 80%;
+    }
+    #image-gallery {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+    .header .container::after {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .container {
+        width: 90%;
+        margin-inline: auto;
+    }
+    html {
+        font-size: 0.6rem;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .container {
+        width: 90%;
+        margin-inline: auto;
+    }
+
+    html {
+        font-size: 0.6rem;
+    }
+}
+
